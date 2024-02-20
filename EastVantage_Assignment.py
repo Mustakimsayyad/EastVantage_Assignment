@@ -30,6 +30,7 @@ conn.close()
 
 sql code 
 # Reading data from tables
+use database Data_Engineer_ETL_Assignment;
 SELECT * FROM customers;
 SELECT * FROM sales;
 SELECT * FROM orders;
