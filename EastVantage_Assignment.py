@@ -1,7 +1,7 @@
 import sqlite3
 import pandas as pd
 
-conn = sqlite3.connect('Data_Engineer_ETL_Assignment.db.db')
+conn = sqlite3.connect('Data_Engineer_ETL_Assignment.db')
 
 # Reading data from tables
 customers = pd.read_sql_query("SELECT * FROM customers", conn)
