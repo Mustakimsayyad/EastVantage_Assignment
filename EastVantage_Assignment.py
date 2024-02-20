@@ -19,3 +19,10 @@ filtered_df = df[(df['age'] >= 18) & (df['age'] <= 35) & (df['quantity'] > 0)]
 
 # Aggregate total quantities per customer and item
 grouped_df = filtered_df.groupby(['age', 'item_name'])['quantity'].sum().reset_index()
+
+# Converting quantity to int and removing decimal
+grouped_df['quantity'] = grouped_df['quantity'].astype(int)
+
+# Saving the results to a CSV file
+grouped_df.to_csv('output.csv', sep=';', index=False)
+conn.close()
